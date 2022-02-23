@@ -1,29 +1,32 @@
-/* User info */
-let kmUser = parseFloat(document.getElementById("my-km").value);
-let ageUser = document.getElementById("user-age").value;
-let calcoloPrice = 0;
-const kmPrice = 0.21;
+
 
 /* event listener calcolo */
 const userButton = document.getElementById("my-submit");
 
 userButton.addEventListener("click", function(){
+    /* User info */
+    let kmUser = parseFloat(document.getElementById("my-km").value);
+    let ageUser = document.getElementById("user-age").value;
+    let calcoloPrice = 0;
+    const kmPrice = 0.21;
     
     
-
     if ( (isNaN(kmUser)) || ((kmUser < 0) || (kmUser > 1000)) ){
         document.getElementById("my-ticket-price").innerHTML = ("I Dati inserti non sono corretti. Non posso calcolare il prezzo.");
     } else if (ageUser == "under"){
         calcoloPrice = (((kmUser * kmPrice) - (((kmUser * kmPrice) * (20)) / 100))).toFixed(2);
-        document.getElementById("my-ticket-price").innerHTML = ("UNDER 18 PRICE ") + calcoloPrice + (" euro");
+        document.getElementById("my-ticket-price").innerHTML = calcoloPrice + (" euro");
+        document.getElementById("print-offer").innerHTML = ("Under 18 discount");
         
     } else if(ageUser == "65"){
         calcoloPrice = (((kmUser * kmPrice) - (((kmUser * kmPrice) * (40)) / 100))).toFixed(2);
-        document.getElementById("my-ticket-price").innerHTML = ("OVER 65 PRICE ") + calcoloPrice + (" euro");
+        document.getElementById("my-ticket-price").innerHTML = calcoloPrice + (" euro");
+        document.getElementById("print-offer").innerHTML = ("Over 65 discount");
         
     } else if(ageUser == "18") {
         calcoloPrice = (kmUser * kmPrice).toFixed(2);
         document.getElementById("my-ticket-price").innerHTML = calcoloPrice + (" euro");
+        document.getElementById("print-offer").innerHTML = ("No discount");
     }
     
     let nameUser = document.getElementById("name-user").value;
