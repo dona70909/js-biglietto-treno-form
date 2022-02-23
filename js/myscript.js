@@ -17,16 +17,22 @@ userButton.addEventListener("click", function(){
         calcoloPrice = (((kmUser * kmPrice) - (((kmUser * kmPrice) * (20)) / 100))).toFixed(2);
         document.getElementById("my-ticket-price").innerHTML = calcoloPrice + (" euro");
         document.getElementById("print-offer").innerHTML = ("Under 18 discount");
+        document.getElementById("print-carrozza").innerHTML = ("Car. 18");
+        document.getElementById("print-code").innerHTML = ("18Disc22");
         
     } else if(ageUser == "65"){
         calcoloPrice = (((kmUser * kmPrice) - (((kmUser * kmPrice) * (40)) / 100))).toFixed(2);
         document.getElementById("my-ticket-price").innerHTML = calcoloPrice + (" euro");
         document.getElementById("print-offer").innerHTML = ("Over 65 discount");
+        document.getElementById("print-carrozza").innerHTML = ("Car. 65");
+        document.getElementById("print-code").innerHTML = ("65Disc22");
         
     } else if(ageUser == "18") {
         calcoloPrice = (kmUser * kmPrice).toFixed(2);
         document.getElementById("my-ticket-price").innerHTML = calcoloPrice + (" euro");
         document.getElementById("print-offer").innerHTML = ("No discount");
+        document.getElementById("print-carrozza").innerHTML = ("Car. 25");
+        document.getElementById("print-code").innerHTML = ("25Disc22");
     }
     
     let nameUser = document.getElementById("name-user").value;
