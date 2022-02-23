@@ -40,7 +40,9 @@ userButton.addEventListener("click", function(){
 const userButtonReset = document.getElementById("my-reset");
 
 userButtonReset.addEventListener("click", function(){
-    let resetInput = document.getElementsByTagName("input").value;
+
+    let resetInput = document.getElementsByTagName("input");
+    resetInput.value = "";
     document.getElementById("display-click").classList.add("d-none");
 });
 
