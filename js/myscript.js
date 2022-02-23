@@ -1,5 +1,5 @@
 /* User info */
-let kmUser = parseInt(document.getElementById("my-km").value);
+let kmUser = parseFloat(document.getElementById("my-km").value);
 let ageUser = document.getElementById("user-age").value;
 
 let calcoloPrice = 0;
@@ -12,15 +12,15 @@ userButton.addEventListener("click", function(){
     
     if ( (isNaN(kmUser)) || ((kmUser < 0) || (kmUser > 1000)) ){
         document.getElementById("my-ticket-price").innerHTML = ("I Dati inserti non sono corretti. Non posso calcolare il prezzo.");
-    } else if (ageUser.value == "under"){
+    } else if (ageUser == "under"){
         calcoloPrice = (((kmUser * kmPrice) - (((kmUser * kmPrice) * (20)) / 100))).toFixed(2);
         document.getElementById("my-ticket-price").innerHTML = ("UNDER 18 PRICE ") + calcoloPrice + (" euro");
 
-    } else if(ageUser.value == "65"){
+    } else if(ageUser == "65"){
         calcoloPrice = (((kmUser * kmPrice) - (((kmUser * kmPrice) * (40)) / 100))).toFixed(2);
         document.getElementById("my-ticket-price").innerHTML = ("OVER 65 PRICE ") + calcoloPrice + (" euro");
 
-    } else if(ageUser.value == "18") {
+    } else if(ageUser == "18") {
         calcoloPrice = (kmUser * kmPrice).toFixed(2);
         document.getElementById("my-ticket-price").innerHTML = calcoloPrice + (" euro");
     }
@@ -44,4 +44,4 @@ userButtonReset.addEventListener("click", function(){
     document.getElementById("display-click").classList.add("d-none");
 });
 
-console.log(typeof ageUser)
+console.log(typeof ageUser.value)
