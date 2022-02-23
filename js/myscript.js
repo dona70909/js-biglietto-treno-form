@@ -1,15 +1,15 @@
-
+/* User info */
+let kmUser = parseFloat(document.getElementById("my-km").value);
+let ageUser = document.getElementById("user-age").value;
+let calcoloPrice = 0;
+const kmPrice = 0.21;
 
 /* event listener calcolo */
 const userButton = document.getElementById("my-submit");
 
 userButton.addEventListener("click", function(){
     
-    /* User info */
-    let kmUser = parseFloat(document.getElementById("my-km").value);
-    let ageUser = document.getElementById("user-age").value;
-    let calcoloPrice = 0;
-    const kmPrice = 0.21;
+    
 
     if ( (isNaN(kmUser)) || ((kmUser < 0) || (kmUser > 1000)) ){
         document.getElementById("my-ticket-price").innerHTML = ("I Dati inserti non sono corretti. Non posso calcolare il prezzo.");
