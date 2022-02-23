@@ -26,11 +26,11 @@ userButton.addEventListener("click", function(){
         document.getElementById("my-ticket-price").innerHTML = calcoloPrice + (" euro");
     }
     
-    let nameUser = document.getElementById("name-user");
+    let nameUser = document.getElementById("name-user").value;
     document.getElementById("print-user-name").innerHTML = nameUser;
     
     
-    let surnameUser = document.getElementById("surname-user");
+    let surnameUser = document.getElementById("surname-user").value;
     document.getElementById("print-user-surname").innerHTML = surnameUser;
     
     document.getElementById("display-click").classList.remove("d-none");
