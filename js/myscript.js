@@ -19,14 +19,14 @@ userButton.addEventListener("click", function(){
         document.getElementById("print-carrozza").innerHTML = ("----");
         document.getElementById("print-code").innerHTML = ("----");
     } else if (ageUser == "under"){
-        calcoloPrice = (((kmUser * kmPrice) - (((kmUser * kmPrice) * (discountUnder))))).toFixed(2);
+        calcoloPrice = (((kmUser * kmPrice) - ((kmUser * kmPrice) * (discountUnder)))).toFixed(2);
         document.getElementById("my-ticket-price").innerHTML = calcoloPrice + (" euro");
         document.getElementById("print-offer").innerHTML = ("Under 18 discount");
         document.getElementById("print-carrozza").innerHTML = ("Car. 18");
         document.getElementById("print-code").innerHTML = ("18Disc22");
         
     } else if(ageUser == "65"){
-        calcoloPrice = (((kmUser * kmPrice) - (((kmUser * kmPrice) * (discountOver))))).toFixed(2);
+        calcoloPrice = (((kmUser * kmPrice) - ((kmUser * kmPrice) * (discountOver)))).toFixed(2);
         document.getElementById("my-ticket-price").innerHTML = calcoloPrice + (" euro");
         document.getElementById("print-offer").innerHTML = ("Over 65 discount");
         document.getElementById("print-carrozza").innerHTML = ("Car. 65");
