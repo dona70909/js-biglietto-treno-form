@@ -15,7 +15,7 @@
     <!-- * font awesome icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- * title -->
-    <title>Booltrain form</title>
+    <title>BOOLTRAINLANDIA</title>
 </head>
 
 <body>
@@ -32,49 +32,44 @@
     <main class="my-bg-colour p-4">
         
         <section class="container-fluid ">
-            <div class="row my-box-style p-4 mb-3 ">
+            <div class="row my-box-style py-4 mb-3 ">
                 
                 <div class="col-12">
                     <h2>Inserisci i dati</h2>
                 </div>
                 
                 
-                <div class="col-12 ">
+                <div class="col-12 col-xl-3 text-center">
+                    <label class="mb-1" for="name-user">Inserisci il tuo nome</label>
+                    <input class="me-2 mb-2 w-100" type="text" id="name-user" placeholder="nome" value="">
+                </div>
 
-                    <div class="my-info  p-2 ">
-                        <div class="container-fluid">
-                            <div class="row mb-4 ">
-                                <div class="col-12">
-                                    <label for="name-user">Inserisci il tuo nome</label>
-                                    <input class="me-2 mb-2" type="text" id="name-user" placeholder="nome" value="">
-                                    
-                                    <label for="surname-user">Inserisci il tuo cognome</label>
-                                    <input class="me-2 mb-2" type="text"  id="surname-user" value="">
-                                    
-                                    <label for="my-km">Inserisci i km</label>
-                                    <input class="me-2 mb-2" type="text" id="my-km" value="">
-                                    
-                                    <label for="user-age">Seleziona eta'</label>
-                                    <select class="mb-2" id="user-age">
-                                        <option value="under">Under 18</option>
-                                        <option value="18"> 18+</option>
-                                        <option value="65"> Over 65</option>
-                                    </select>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="container-fluid">
-                            <div class="row">
-                                <div class="col-12 text-center">
-                                    <button type="submit" class="btn btn-dark me-2" id="my-submit">Submit</button>
-                                    <button type="submit" id="my-reset" class="btn btn-dark">Reset</button>
-                                </div>
-                            </div>
-                        </div>
-                        
+                <div class="col-12 col-xl-3 text-center">
+                    <label class="mb-1"  for="surname-user">Inserisci il tuo cognome</label>
+                    <input class="me-2 mb-2 w-100" type="text"  id="surname-user" placeholder="cognome" value="">  
+                </div>
+
+                <div class="col-12 col-xl-3 text-center">
+                    <label class="mb-1"  for="my-km">Inserisci i km</label>
+                    <input class="me-2 mb-2 w-100" type="text" id="my-km" placeholder="km" value="">
+                </div>
+
+                <div class="col-12 col-xl-3 text-center mb-4 mb-xl-0">
+                    <label class="mb-1 d-block "  for="user-age">Seleziona eta'</label>
+                    <div class="d-flex justify-content-center">
+                        <select class="mb-2  w-50 w-xl-100  text-center" id="user-age">
+                            <option value="under">Under 18</option>
+                            <option value="18"> 18+</option>
+                            <option value="65"> Over 65</option>
+                        </select>
                     </div>
                 </div>
+                
+                <div class="col-12 text-center ">
+                    <button type="submit" class="btn btn-dark rounded-pill me-2" id="my-submit">Submit</button>
+                    <button type="submit" id="my-reset" class="btn btn-dark rounded-pill">Reset</button>
+                </div>
+                
             </div>
         </section>
         
@@ -85,28 +80,28 @@
                     <h2>Ecco il tuo Biglietto</h2>
                 </div>
                 
-                <div class="col-2">
+                <div class="col-12 col-xl-2">
                     <h5>Nome passeggero</h5>
                     <p class="mb-1" id="print-user-name"></p>
                     <p id="print-user-surname"></p>
                 </div>
                 
-                <div class="col-2">
+                <div class="col-12 col-xl-2">
                     <h5>Offerta</h5>
                     <p id="print-offer"></p>
                 </div>
                 
-                <div class="col-2">
+                <div class="col-12 col-xl-2">
                     <h5>Carrozza</h5>
                     <p id="print-carrozza"></p>
                 </div>
                 
-                <div class="col-2">
+                <div class="col-12 col-xl-2">
                     <h5>Codice</h5>
                     <p id="print-code"></p>
                 </div>
                 
-                <div class="col-2">
+                <div class="col-12 col-xl-2">
                     <h5>Costo Biglietto</h5>
                     <p id="my-ticket-price"></p>
                 </div>

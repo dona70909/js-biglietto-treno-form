@@ -1,15 +1,12 @@
 
-header{
-    height: 10vh;
-    background-color: brown;
+body{
+    background-color: rgb(169, 207, 169);
 }
-/* main */
-.my-bg-colour{
-    background-color: brown;
-    height:90vh;
+main{
+    font-family:monospace;
 }
-
 .my-box-style{
     background-color: white;
     border-radius: 20px;
 }
+
