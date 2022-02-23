@@ -54,8 +54,6 @@ userButton.addEventListener("click", function(){
 const userButtonReset = document.getElementById("my-reset");
 
 userButtonReset.addEventListener("click", function(){
-    document.getElementById("name-user").value = "";
-    document.getElementById("surname-user").value = "";
-    document.getElementById("my-km").value = "";
+    document.querySelectorAll("input") = " ";
     document.getElementById("display-click").classList.add("d-none");
 });
