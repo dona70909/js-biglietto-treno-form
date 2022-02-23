@@ -30,6 +30,9 @@ userButton.addEventListener("click", function(){
 
     const nameUser = document.getElementById("name-user").value;
     document.getElementById("print-user-name").innerHTML = nameUser;
+
+    const surnameUser = document.getElementById("surname-user").value;
+    document.getElementById("print-user-surname").innerHTML = nameUser;
     
 });
 
