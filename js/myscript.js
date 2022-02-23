@@ -8,20 +8,22 @@ userButton.addEventListener("click", function(){
     let kmUser = parseFloat(document.getElementById("my-km").value);
     let ageUser = document.getElementById("user-age").value;
     let calcoloPrice = 0;
-    const kmPrice = 0.21;
+    const kmPrice = 0.27;
+    const discountOver = 33;
+    const discountUnder =  17;
     
     
     if ( (isNaN(kmUser)) || ((kmUser < 0) || (kmUser > 1000)) ){
         document.getElementById("my-ticket-price").innerHTML = ("I Dati inserti non sono corretti. Non posso calcolare il prezzo.");
     } else if (ageUser == "under"){
-        calcoloPrice = (((kmUser * kmPrice) - (((kmUser * kmPrice) * (20)) / 100))).toFixed(2);
+        calcoloPrice = (((kmUser * kmPrice) - (((kmUser * kmPrice) * (discountUnder)) / 100))).toFixed(2);
         document.getElementById("my-ticket-price").innerHTML = calcoloPrice + (" euro");
         document.getElementById("print-offer").innerHTML = ("Under 18 discount");
         document.getElementById("print-carrozza").innerHTML = ("Car. 18");
         document.getElementById("print-code").innerHTML = ("18Disc22");
         
     } else if(ageUser == "65"){
-        calcoloPrice = (((kmUser * kmPrice) - (((kmUser * kmPrice) * (40)) / 100))).toFixed(2);
+        calcoloPrice = (((kmUser * kmPrice) - (((kmUser * kmPrice) * (discountOver)) / 100))).toFixed(2);
         document.getElementById("my-ticket-price").innerHTML = calcoloPrice + (" euro");
         document.getElementById("print-offer").innerHTML = ("Over 65 discount");
         document.getElementById("print-carrozza").innerHTML = ("Car. 65");
