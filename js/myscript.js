@@ -1,6 +1,4 @@
-/* User info */
-let kmUser = parseFloat(document.getElementById("my-km").value);
-let ageUser = document.getElementById("user-age").value;
+
 
 let calcoloPrice = 0;
 const kmPrice = 0.21;
@@ -9,7 +7,9 @@ const kmPrice = 0.21;
 const userButton = document.getElementById("my-submit");
 
 userButton.addEventListener("click", function(){
-    
+    /* User info */
+let kmUser = parseFloat(document.getElementById("my-km").value);
+let ageUser = document.getElementById("user-age").value;
     if ( (isNaN(kmUser)) || ((kmUser < 0) || (kmUser > 1000)) ){
         document.getElementById("my-ticket-price").innerHTML = ("I Dati inserti non sono corretti. Non posso calcolare il prezzo.");
     } else if (ageUser == "under"){
@@ -38,10 +38,8 @@ userButton.addEventListener("click", function(){
 const userButtonReset = document.getElementById("my-reset");
 
 userButtonReset.addEventListener("click", function(){
-
-    let resetInput = document.getElementsByTagName("input");
-    resetInput.value = "";
+    document.getElementById("name-user").value = "";
+    document.getElementById("surname-user").value = "";
+    document.getElementById("my-km").value = "";
     document.getElementById("display-click").classList.add("d-none");
 });
-
-console.log(typeof ageUser.value)
