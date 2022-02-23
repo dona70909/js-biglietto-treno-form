@@ -27,28 +27,70 @@
             </div>
         </div>
     </header>
-
-    <main>
-        <div class="container-fluid p-4 bg-dark text-white  ">
-            <div class="row">
+    
+    <main class="my-bg-colour p-4">
+        
+        <section class="container-fluid ">
+            <div class="row my-box-style p-4 mb-3 ">
+                
+                <div class="col-12">
+                    <h2>Inserisci i dati</h2>
+                </div>
+                
+                
                 <div class="col-12 ">
-                    <div class="my-info">
-                        <h2>Quanti km vuoi percorrere:</h2>
-                        <p id="my-km"></p>
-
-                        <h2>Quanti anni hai?</h2>
-                        <p id="my-age"></p>
-                    </div>
-
-                    <div class="my-price-container">
-                        <h2>Il costo del Biglietto:</h2>
-                        <p id="my-price"></p>
+                    <div class="my-info  p-2 ">
+                        
+                        <div class="row mb-4 ">
+                            <div class="col-12">
+                                <label for="nameUser">Inserisci il tuo nome</label>
+                                <input class="me-2" type="text" id="nameUser" placeholder="nome">
+                                
+                                <label for="surnameUser">Inserisci il tuo cognome</label>
+                                <input class="me-2" type="text"  id="surnameUser">
+                                
+                                <label for="kmUser">Inserisci i km </label>
+                                <input class="me-2" type="text" id="kmUser">
+                                
+                                <label for="userAge">Seleziona</label>
+                                <select  id="userAge">
+                                    <option value="18">Maggiorenne</option>
+                                    <option value="65">Over 65</option>
+                                </select>
+                            </div>
+                        </div>
+                        
+                        <div class="row">
+                            <div class="col-12 text-center">
+                                <button type="submit" class="btn btn-dark me-2">Submit</button>
+                                <button type="submit" class="btn btn-dark">Reset</button>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
+        
+        <section class="container-fluid">
+            
+            <div class="row my-box-style p-4 ">
+                <div class="col-12">
+                    <h2>Ecco il tuo Biglietto</h2>
+                </div>
+                
+                <div class="col-2">
+                    ciao
+                </div>
+                <div class="col-2">ciao</div>
+                <div class="col-2">ciao</div>
+                <div class="col-2">ciao</div>
+                <div class="col-2">ciao</div>
+                <div class="col-2">ciao</div>
+            </div>
+            
+        </section>
     </main>
-
-    <script type="text/javascript" src="js/myscript.js"></script>
+    
+    <!--  <script type="text/javascript" src="js/myscript.js"></script> -->
 </body>
 </html>

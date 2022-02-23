@@ -1,0 +1,15 @@
+
+header{
+    height: 10vh;
+    background-color: brown;
+}
+/* main */
+.my-bg-colour{
+    background-color: brown;
+    height:90vh;
+}
+
+.my-box-style{
+    background-color: white;
+    border-radius: 20px;
+}
