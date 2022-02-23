@@ -23,7 +23,7 @@ userButton.addEventListener("click", function(){
         calcoloPrice = (((kmUser * kmPrice) - (((kmUser * kmPrice) * (40)) / 100))).toFixed(2);
         document.getElementById("my-ticket-price").innerHTML = ("OVER 65 PRICE ") + calcoloPrice + (" euro");
 
-    } else {
+    } else if(ageUser.value == "18") {
         calcoloPrice = (kmUser * kmPrice).toFixed(2);
         document.getElementById("my-ticket-price").innerHTML = calcoloPrice + (" euro");
     }
@@ -36,3 +36,11 @@ userButton.addEventListener("click", function(){
     
     document.getElementById("display-click").classList.remove("d-none");
 });
+
+const userButtonReset = document.getElementById("my-reset");
+
+userButtonReset.addEventListener("click", function(){
+    let resetInput = document.getElementsByTagName("input").value;
+    document.getElementById("display-click").classList.add("d-none");
+});
+
