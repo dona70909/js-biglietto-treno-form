@@ -34,6 +34,7 @@ userButton.addEventListener("click", function(){
     const surnameUser = document.getElementById("surname-user").value;
     document.getElementById("print-user-surname").innerHTML = nameUser;
     
+    document.getElementById("display-click").classList.remove("d-none");
 });
 
 
