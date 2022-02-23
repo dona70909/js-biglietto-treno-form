@@ -1,14 +1,11 @@
-/* User info const */
-let kmUser = document.getElementById("my-km").value;
+/* User info */
+let kmUser = parseInt(document.getElementById("my-km").value);
 let ageUser = document.getElementById("user-age").value;
+
 let calcoloPrice = 0;
 const kmPrice = 0.21;
 
-
-
-
-
-
+/* event listener calcolo */
 const userButton = document.getElementById("my-submit");
 
 userButton.addEventListener("click", function(){
@@ -37,6 +34,7 @@ userButton.addEventListener("click", function(){
     document.getElementById("display-click").classList.remove("d-none");
 });
 
+/* reset evenListener */
 const userButtonReset = document.getElementById("my-reset");
 
 userButtonReset.addEventListener("click", function(){
@@ -46,3 +44,4 @@ userButtonReset.addEventListener("click", function(){
     document.getElementById("display-click").classList.add("d-none");
 });
 
+console.log(typeof ageUser)
