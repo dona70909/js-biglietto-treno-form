@@ -32,7 +32,7 @@ userButton.addEventListener("click", function(){
         document.getElementById("print-carrozza").innerHTML = ("Car. 65");
         document.getElementById("print-code").innerHTML = ("65Disc22");
         
-    } else if(ageUser == "18") {
+    } else  {
         calcoloPrice = (kmUser * kmPrice).toFixed(2);
         document.getElementById("my-ticket-price").innerHTML = calcoloPrice + (" euro");
         document.getElementById("print-offer").innerHTML = ("No discount");
@@ -40,6 +40,7 @@ userButton.addEventListener("click", function(){
         document.getElementById("print-code").innerHTML = ("25Disc22");
     }
     
+
     let nameUser = document.getElementById("name-user").value;
     document.getElementById("print-user-name").innerHTML = nameUser;
     
